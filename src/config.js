@@ -16,7 +16,7 @@ const layersDir = path.join(basePath, "/layers");
  ***********************/
 
 const description =
-  "This is the description of your NFT project, remember to replace this";
+  "Crabeanies < add more >";
 const baseUri = "ipfs://NewUriToReplace";
 
 const outputJPEG = false; // if false, the generator outputs png's
@@ -28,46 +28,27 @@ const outputJPEG = false; // if false, the generator outputs png's
 const startIndex = 0;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 1000,
+  height: 1000,
   smoothing: true, // set to false when up-scaling pixel art.
 };
 
 const background = {
-  generate: true,
+  generate: false,
   brightness: "80%",
 };
 
 const layerConfigurations = [
   {
     growEditionSizeTo: 10,
-    namePrefix: "Series 2", // Use to add a name to Metadata `name:`
+    namePrefix: "Crabeanies", // Use to add a name to Metadata `name:`
     layersOrder: [
       { name: "Background" },
-      {
-        name: "Back Accessory",
-        // options: {
-        //   bypassDNA: true,
-        // },
-      },
-      { name: "Head" },
-      { name: "Clothes" },
-      { name: "Eyes" },
-      { name: "Hair" },
-      { name: "Accessory" },
-      { name: "Shirt Accessories" },
+      { name: "Beanie" },
+      { name: "Character" },
+      { name: "Mask" },
     ],
   },
-  // {
-  //   growEditionSizeTo: 10,
-  //   namePrefix: "Lion",
-  //   resetNameIndex: true, // this will start the Lion count at #1 instead of #6
-  //   layersOrder: [
-  //     { name: "Background" },
-  //     { name: "Hats" },
-  //     { name: "Male Hair" },
-  //   ],
-  // },
 ];
 
 /**
@@ -117,8 +98,8 @@ const forcedCombinations = {
  * clean-filename: trait-value override pairs. Wrap filenames with spaces in quotes.
  */
 const traitValueOverrides = {
-  Helmet: "Space Helmet",
-  "gold chain": "GOLDEN NECKLACE",
+  // Helmet: "Space Helmet",
+  // "gold chain": "GOLDEN NECKLACE",
 };
 
 const extraMetadata = {};
@@ -149,7 +130,7 @@ const extraAttributes = () => [
 ];
 
 // Outputs an Keccack256 hash for the image. Required for provenance hash
-const hashImages = true;
+const hashImages = false;
 
 const rarityDelimiter = "#";
 
